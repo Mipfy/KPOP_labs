@@ -1,0 +1,18 @@
+Имя и фамилия:<input type="text" [(ngModel)]="userData.name">
+<div *ngIf="!(nameErr==='')"  id="nameErr">{{nameErr}}</div>
+<hr>
+Телефон:<input type="text" [(ngModel)]="userData.phone">
+<div *ngIf="!(phoneErr==='')"  id="phoneErr">{{phoneErr}}</div>
+<hr>
+Email:<input type="text" [(ngModel)]="userData.email">
+<div *ngIf="!(emailErr==='')"  id="emailErr">{{emailErr}}</div>
+<hr>
+Пол:<input type="radio" name="sex" value="male"  [(ngModel)]="userData.sex" >М <input type="radio" name="sex" value="female"[(ngModel)]="userData.sex">Ж
+<div *ngIf="!(sexErr==='')"  id="sexErr">{{sexErr}}</div>
+<hr>
+Перечислите личные качества:<input type="text" [(ngModel)]="userData.msgText">
+<hr>
+Выберите ваших любимых животных:<input type="radio" name="animals" value = "Zebra" [(ngModel)]="userData.animals">Зебра<input type="radio" name="animals" value = "Koshak" [(ngModel)]="userData.animals">Кошак<input type="radio" name="animals" value = "Anaconda" [(ngModel)]="userData.animals"> Anaconda<input type="radio" name="animals" value = "human" [(ngModel)]="userData.animals">Человек<input type="radio" name="animals" value = "elephant" [(ngModel)]="userData.animals">Слон <input type="radio" name="animals" value = "Antilopa" [(ngModel)]="userData.animals">Антилопа<input type="radio" name="animals" value = "bird" [(ngModel)]="userData.animals"> Голубь<input type="radio" name="animals" value = "crab" [(ngModel)]="userData.animals">краб
+<div *ngIf="!(animalErr==='')"  id="animalErr">{{animalErr}}</div>
+<hr>
+<input type="button"  value="Отправить информацию" (click)="checkData()">
